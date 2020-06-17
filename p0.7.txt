@@ -1,0 +1,15 @@
+     P0: My First Kernel Mod
+         NAME: Suchita Singh Kanthwal
+UFID: 9855-9781
+
+In this project, we need to modify the kernel by printing our name, UFID and some personal message.The first thing is to check all the individual directories in the reptilian kernel.As, it is difficult and time consuming to exactly find the location of the message, so to make our work easy we use the grep command to see the exact file in the folder.
+grep -r ‘rcu_end_inkernel_boot()’
+This search gives us some files inside the init directory. One, file is main.c and the other is documentation.We, will not go for documentation because it basically just show the files but is not executable for other process. We edit the  main.c file and create a patch file. 
+To modify the GRUB, we went inside the cd/. We will find the file grub and will edit our menu.list.
+In the testing phase we applied the patch file after restoring the reptilian kernel to its original snapshot. The path did as intended displaying the required output during the boot process.
+
+Youtube link to video: https://youtu.be/SZ3edEAMn9c
+
+
+
+
